@@ -209,5 +209,5 @@ jobs:
         run: |
           for SERVICE in frontend user-service task-service notification-service analytics-service; do
             echo "==> Checking rollout: ${SERVICE}"
-            kubectl rollout status deployment/${SERVICE} -n task-management --timeout=180s
+            kubectl rollout status deployment/${SERVICE} -n task-management --timeout=5m
           done
